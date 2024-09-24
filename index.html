@@ -16,7 +16,7 @@
         </header>
         <hr id="divider">
         <main>
-            <p id="chapter">
+            <!-- <p id="chapter">
                 Project
             </p>
             <hr id="perforations">
@@ -90,7 +90,7 @@
                 Details
             </button>
             <script src="script.js">
-            </script>
+            </script> -->
         </main>
         <hr id="divider">
         <footer>
@@ -106,7 +106,7 @@
 
 
         <div>
-            <div class="box_wrap">
+            <!-- <div class="box_wrap">
                 <div style="background-color: #999;">
                     <input type="radio" name="tab_menu" id="introduction" checked>
                     <label for="introduction">ABOUT</label>
@@ -115,17 +115,91 @@
                     <input type="radio" name="tab_menu" id="project">
                     <label for="project">PROJECT</label>
                 </div>
-            </div>
+            </div> -->
             
-            <!-- <input type="radio" name="tab_menu" id="introduction" checked>
+            <input type="radio" name="tab_menu" id="introduction" checked>
             <label for="introduction">ABOUT</label>
             <input type="radio" name="tab_menu" id="project">
-            <label for="project">PROJECT</label> -->
-            <div id="introduction" class="conbox con1">
-                TEXT01
+            <label for="project">PROJECT</label>
+            <div class="content_box introduction_content">
+                INTRODUCTION CONTENT
             </div>
-            <div id="project" class="conbox con2">
-                TEXT02
+            <div class="content_box project_content">
+                <p id="chapter">
+                    Project
+                </p>
+                <hr id="perforations">
+                <p id="verse">
+                    1st Project (2023.09 ~ 2024.08)<br><br>
+                    Offline Mobile Game Project Using Unity/C# - Sooey Aquaria<br><br>
+                    Released on ONE store 
+                    <a
+                        href="https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000778309"
+                        target="_blank"
+                        >
+                        [Link]
+                    </a><br>
+                </p>
+                <table
+                    border="1" 
+                    bordercolor="black"
+                    width="100%"
+                    style="table-layout: fixed;"
+                    >
+                    <th id="element">
+                        Game Logo
+                    </th>
+                    <th id="element" colspan="3">
+                        Game Images
+                    </th>
+                    <tr>
+                        <td>
+                            <p style="text-align: center;">
+                                <img
+                                    src="Title Logo.png"
+                                    alt="Title Logo of 'Sooey Aquaria'"
+                                    width="100%"
+                                    height="100%"
+                                    >
+                            </p>
+                        </td>
+                        <td>
+                            <p style="text-align: center;">
+                                <img
+                                    src="Game Image 1.jpg"
+                                    alt="Game Image 1 of 'Sooey Aquaria'"
+                                    width="100%"
+                                    height="100%"
+                                    >
+                            </p>
+                        </td>
+                        <td>
+                            <p style="text-align: center;">
+                                <img
+                                    src="Game Image 2.jpg"
+                                    alt="Game Image 2 of 'Sooey Aquaria'"
+                                    width="100%"
+                                    height="100%"
+                                    >
+                            </p>
+                        </td>
+                        <td>
+                            <p style="text-align: center;">
+                                <img
+                                    src="Game Image 3.jpg"
+                                    alt="Game Image 3 of 'Sooey Aquaria'"
+                                    width="100%"
+                                    height="100%"
+                                    >
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <button id="btn-modal">
+                    Details
+                </button>
+                <script src="script.js">
+                </script>
             </div>
         </div>
 
@@ -164,7 +238,7 @@
                 color : #000;
             }
 
-            .conbox {
+            .content_box {
                 width : 100%;
                 height : 600px;
                 background: #aaa;
@@ -172,10 +246,10 @@
                 display: none;
             }
 
-            input[id="introduction"]:checked ~ .con1 {
+            input[id="introduction"]:checked ~ .introduction_content {
                 display: block;
             }
-            input[id="project"]:checked ~ .con2 {
+            input[id="project"]:checked ~ .project_content {
                 display: block;
             }
         </style>
