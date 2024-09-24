@@ -115,6 +115,44 @@
             <div class="conbox con3">TEXT03</div>
         </div>
 
+        <style>
+            input[type="radio"] {
+                display : none;
+            }
+
+            input[type="radio"] + label {
+                display : inline-block;
+                padding : 20px;
+                background : #ccc;
+                color : #999;
+                font-size : 14px;
+                cursor : pointer;
+            }
+
+            input[type="radio"]:checked + label {
+                background : #aaa;
+                color : #000;
+            }
+
+            .conbox {
+                width : 500px;
+                height : 600px;
+                background: #aaa;
+                margin : 0 auto;
+                display: none;
+            }
+
+            input[id="tab01"]:checked ~ .con1 {
+                display: block;
+            }
+            input[id="tab02"]:checked ~ .con2 {
+                display: block;
+            }
+            input[id="tab03"]:checked ~ .con3 {
+                display: block;
+            }
+        </style>
+
 
     </body>
 </html>
