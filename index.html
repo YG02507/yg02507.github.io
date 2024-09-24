@@ -103,20 +103,32 @@
 
 
         <div>
-            <div display="inline-block">
-                <input type="radio" name="tabmenu" id="introduction" checked>
-                <label for="introduction">ABOUT</label>
+            <div class="box_wrap">
+                <div>
+                    <input type="radio" name="tabmenu" id="introduction" checked>
+                    <label for="introduction">ABOUT</label>
+                </div>
+                <div>
+                    <input type="radio" name="tabmenu" id="project">
+                    <label for="project">PROJECT</label>
+                </div>
             </div>
-            <div display="inline-block">
-                <input type="radio" name="tabmenu" id="project">
-                <label for="project">PROJECT</label>
-            </div>
-
             <div class="conbox con1">TEXT01</div>
             <div class="conbox con2">TEXT02</div>
         </div>
 
+
+
+
+
+
         <style>
+            .box_wrap {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
             input[type="radio"] {
                 display : none;
             }
