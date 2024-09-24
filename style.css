@@ -1,15 +1,25 @@
 @charset "UTF-8";
 
 #title {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 5vw;
+    text-align : center;
+    font-family : Arial, Helvetica, sans-serif;
+    font-weight : bold;
+    font-size : 5vw;
 }
 
 #divider {
-    color: red;
-    border-width: 20px;
+    background-color : black;
+    width : 100%;
+    height : 10px;
+    border : 0;
+}
+
+#perforations {
+    background-color : black;
+    width : 100%;
+    height : 5px;
+    border : none;
+    border-top : 5px dotted grey;
 }
 
 #id1 {
