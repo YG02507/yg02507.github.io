@@ -102,23 +102,21 @@
 
 
 
-        <div>
-            <div class="box_wrap">
-                <div>
-                    <input type="radio" name="tabmenu" id="introduction" checked>
-                    <label for="introduction">ABOUT</label>
-                </div>
-                <div>
-                    <input type="radio" name="tabmenu" id="project">
-                    <label for="project">PROJECT</label>
-                </div>
+        <div class="box_wrap">
+            <div style="background-color: #999;">
+                <input type="radio" name="tabmenu" id="introduction" checked>
+                <label for="introduction">ABOUT</label>
             </div>
-            <div class="conbox con1">
-                TEXT01
+            <div style="background-color: #999;">
+                <input type="radio" name="tabmenu" id="project">
+                <label for="project">PROJECT</label>
             </div>
-            <div class="conbox con2">
-                TEXT02
-            </div>
+        </div>
+        <div class="conbox con1">
+            TEXT01
+        </div>
+        <div class="conbox con2">
+            TEXT02
         </div>
 
 
@@ -133,13 +131,12 @@
                 justify-content: space-around;
             }
 
-            input[type="radio"] {
+            /* input[type="radio"] {
                 display : none;
-            }
+            } */
 
             input[type="radio"] + label {
                 text-align: center;
-                display : inline-block;
                 width : 100%;
                 background : #ccc;
                 color : #999;
