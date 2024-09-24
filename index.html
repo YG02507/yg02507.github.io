@@ -28,11 +28,11 @@
             </div> -->
             
             <input type="radio" name="tab_menu" id="introduction" checked>
-            <label for="introduction" id="chapter" width="2.5vw">
+            <label for="introduction" id="chapter">
                 ABOUT
             </label>
             <input type="radio" name="tab_menu" id="project">
-            <label for="project" id="chapter" width="2.5vw">
+            <label for="project" id="chapter">
                 PROJECT
             </label>
             <div class="content_box introduction_content">
@@ -148,23 +148,25 @@
 
             input[type="radio"] + label {
                 text-align: center;
-                width : 100%;
-                /* padding: 20px; */
-                background : #ccc;
-                color : #999;
+                width : 150%;
+                height : 150%;
+                /* padding-left: 20px;
+                padding-right: 20px; */
+                background : lightgrey;
+                color : grey;
                 font-size : 20px;
                 cursor : pointer;
             }
 
             input[type="radio"]:checked + label {
-                background : #aaa;
-                color : #000;
+                background : grey;
+                color : black;
             }
 
             .content_box {
                 width : 100%;
                 height : 100%;
-                background: #aaa;
+                background: lightgrey;
                 margin : 0 auto;
                 display: none;
             }
