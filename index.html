@@ -28,12 +28,16 @@
             </div> -->
             
             <input type="radio" name="tab_menu" id="introduction" checked>
-            <label for="introduction" width=50%>
-                ABOUT
+            <label for="introduction">
+                <h2 id="chapter">
+                    ABOUT
+                </h2>
             </label>
             <input type="radio" name="tab_menu" id="project">
-            <label for="project" width=50%>
-                PROJECT
+            <label for="project">
+                <h2 id="chapter">
+                    PROJECT
+                </h2>
             </label>
             <div class="content_box introduction_content">
                 <hr id="perforations">
@@ -45,7 +49,7 @@
             <div class="content_box project_content">
                 <hr id="perforations">
                 <p id="chapter">
-                    Project
+                    PROJECT
                 </p>
                 <hr id="perforations">
                 <p id="verse">
@@ -136,11 +140,11 @@
 
 
         <style>
-            .box_wrap {
+            /* .box_wrap {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-            }
+            } */
 
             /* input[type="radio"] {
                 display : none;
