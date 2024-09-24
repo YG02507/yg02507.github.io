@@ -7,8 +7,23 @@
     font-size : 5vw;
 }
 
+#chapter {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+
+#verse {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.0vw;
+}
+
 #divider {
     background-color : black;
+    border-color: black;
     width : 100%;
     height : 10px;
 }
@@ -16,27 +31,15 @@
 #perforations {
     width : 100%;
     height : 5px;
-    border : 0px;
     border-top : 5px dotted grey;
+    border-bottom : 0px solid transparent;
+    border-left : 0px solid transparent;
+    border-right : 0px solid transparent;
 }
 
-#id1 {
+#element {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 100%;
-}
-
-#id3 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 2.5vw;
-}
-
-#id4 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 2.0vw;
 }
