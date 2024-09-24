@@ -99,5 +99,55 @@
             <div class="modal_popup">
             </div>
         </div>
+
+
+
+
+
+        <div>
+            <input type="radio" name="tabmenu" id="tab01" checked>
+            <label for="tab01">TB01</label>
+            <input type="radio" name="tabmenu" id="tab02">
+            <label for="tab02">TB02</label>
+            <input type="radio" name="tabmenu" id="tab03">
+            <label for="tab03">TB03</label>
+
+            <div class="conbox con1">TEXT01</div>
+            <div class="conbox con2">TEXT02</div>
+            <div class="conbox con3">TEXT03</div>
+        </div>
+
+        <style>
+            input[type="radio"] {
+                display : none;
+            }
+
+            input[type="radio"] + label {
+                display : inline-block;
+                padding : 20px;
+                background : #ccc;
+                color : #999;
+                font-size : 14px;
+                cursor : pointer;
+            }
+
+            input[type="radio"]:checked + label {
+                background : #aaa;
+                color : #000;
+            }
+
+            .conbox {
+                width : 500px;
+                height : 600px;
+                background: #aaa;
+                margin : 0 auto;
+                display: none;
+            }
+
+        </style>
+
+
+
+
     </body>
 </html>
