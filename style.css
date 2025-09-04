@@ -12,6 +12,7 @@
     padding: 0;
     list-style: none;
     font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 :root {
@@ -28,6 +29,7 @@ html {
 body {
     padding: var(--spacing);
     width: 100%;
+    overflow-y: scroll;
 }
 
 header {
@@ -67,19 +69,19 @@ footer {
     border-radius: calc(var(--thickness) / 4);
     width: 100%;
     height: calc(var(--thickness) / 2);
-    background-color: lightgrey;
+    background-color: grey;
 }
 
 .tab-component {
     border: calc(var(--thickness) / 2), solid, grey;
     border-radius: calc(var(--thickness));
     width: 100%;
+    background-color: white;
     overflow: auto;
 }
 
 .tab-menu {
     display: flex;
-    background-color: #f7f7f7;
 }
 
 .tab-menu a {
@@ -110,7 +112,6 @@ footer {
 
 .tab-content-container {
     padding: var(--spacing);
-    background-color: white;
 }
 
 .tab-content-container h2 {
@@ -150,7 +151,7 @@ footer {
 }
 
 .project-icon img {
-    border: 0.125rem solid black;
+    border: 0.125rem solid grey;
     max-width: 100%;
     height: auto;
 }
@@ -158,13 +159,13 @@ footer {
 .grid-container {
     margin-top: var(--spacing);
     margin-bottom: var(--spacing);
-    border: 0.125rem solid black;
+    border: 0.125rem solid grey;
     width: 100%;
     display: grid;
 }
 
 .grid-container > div {
-    border: 0.125rem solid black;
+    border: 0.125rem solid grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,6 +176,7 @@ footer {
     background-color: lightgrey;
     text-align: center;
     font-size: min(2.0vw, 2.5rem);
+    color: black;
 }
 
 .game-image {
@@ -227,5 +229,46 @@ footer {
 
     .grid-container.second-grid > div:nth-child(6) {
         grid-column: 1 / span 4;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .section-divider {
+        background-color: white;
+    }
+
+    .tab-component {
+        background-color: black;
+    }
+
+    .tab-menu a {
+        background-color: darkgrey;
+        color: grey;
+    }
+
+    .tab-menu a[aria-selected="true"] {
+        background-color: black;
+        color: white;
+    }
+
+    .tab-menu a:hover {
+        color: white;
+    }
+
+    .project-logo {
+        filter: invert(100%);
+    }
+
+    .schema {
+        background-color: darkgrey;
+        color: white;
     }
 }
