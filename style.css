@@ -16,7 +16,9 @@
 
 :root {
     --spacing: 2.0rem;
+    --tracking: 0.25rem;
     --title: min(2.5vw, 5.5rem);
+    --thickness: 1.0rem;
 }
 
 html {
@@ -28,49 +30,49 @@ body {
     width: 100%;
 }
 
-.page-header {
+header {
     margin-top: var(--spacing);
-    margin-right: -0.25rem;
+    margin-right: calc(var(--tracking) * -1);
     width: 100%;
     text-align: center;
     font-weight: bold;
     font-size: var(--title);
-    letter-spacing: 0.25rem;
+    letter-spacing: var(--tracking);
 }
 
-.page-main {
+main {
     width: 100%;
 }
 
-.page-footer {
+footer {
     margin-bottom: var(--spacing);
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: clamp(1.0rem, 5.0vw, 5.0rem);
+    font-size: var(--title);
 }
 
 .section-divider {
-    margin-top: 2.0rem;
-    margin-bottom: 2.0rem;
-    border-radius: 0.5rem;
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: calc(var(--thickness) / 2);
     width: 100%;
-    height: 1.0rem;
+    height: var(--thickness);
     background-color: black;
 }
 
 .content-divider {
-    margin-top: 1.0rem;
-    margin-bottom: 1.0rem;
-    border-radius: 0.25rem;
+    margin-top: calc(var(--spacing) / 2);
+    margin-bottom: calc(var(--spacing) / 2);
+    border-radius: calc(var(--thickness) / 4);
     width: 100%;
-    height: 0.5rem;
+    height: calc(var(--thickness) / 2);
     background-color: lightgrey;
 }
 
 .tab-component {
-    border: 0.5rem, solid, grey;
-    border-radius: 1.0rem;
+    border: calc(var(--thickness) / 2), solid, grey;
+    border-radius: calc(var(--thickness));
     width: 100%;
     overflow: auto;
 }
@@ -119,62 +121,66 @@ body {
     letter-spacing: 0.5rem;
 }
 
-.tab-content-container .verse {
+.tab-content-container p {
     text-align: left;
     font-size: clamp(1.0rem, 2.0vw, 2.5rem);
     line-height: 2.0;
 }
 
-.matrix2x4-container {
+.project-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-icon {
+    width: 12.5%;
+    text-align: right;
+}
+
+.project-icon img {
+    border: 0.125rem solid black;
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-container {
     margin-top: var(--spacing);
     margin-bottom: var(--spacing);
+    border: 0.125rem solid black;
+    width: 100%;
     display: grid;
+}
+
+.grid-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: min(2.0vw, 2.5rem);
+    border: 0.125rem solid black;
+}
+
+.grid-container.row2column4 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-auto-rows: min-content;
-    width: 100%;
-    height: auto;
-    border: 0.125rem solid black;
 }
 
-.matrix4x4-container {
-    margin-top: var(--spacing);
-    margin-bottom: var(--spacing);
-    display: grid;
+.grid-container.row2column4 > div:nth-child(2) {
+    grid-column: 2 / span 3;
+}
+
+.grid-container.row4column4 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-auto-rows: min-content;
-    width: 100%;
-    height: auto;
-    border: 0.125rem solid black;
 }
 
-.matrix2x4-container > div:nth-child(2) {
-    grid-column: 2 / 5;
+.grid-container.row4column4 > div:nth-child(2) {
+    grid-column: 2 / span 3;
 }
 
-.matrix4x4-container > div:nth-child(2) {
-    grid-column: 2 / 5;
-}
-
-.matrix4x4-container > div:nth-child(7) {
-    grid-column: 1 / 5;
-}
-
-.matrix2x4-container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: min(2.0vw, 2.5rem);
-    border: 0.125rem solid black;
-}
-
-.matrix4x4-container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: min(2.0vw, 2.5rem);
-    border: 0.125rem solid black;
+.grid-container.row4column4 > div:nth-child(7) {
+    grid-column: 1 / span 4;
 }
 
 .schema {
