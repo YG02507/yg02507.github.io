@@ -125,7 +125,7 @@ body {
     line-height: 2.0;
 }
 
-.matrix-container {
+.matrix2x4-container {
     margin-top: var(--spacing);
     margin-bottom: var(--spacing);
     display: grid;
@@ -137,11 +137,39 @@ body {
     border: 0.125rem solid black;
 }
 
-.matrix-container > div:nth-child(2) {
+.matrix4x4-container {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-auto-rows: min-content;
+    width: 100%;
+    height: auto;
+    border: 0.125rem solid black;
+}
+
+.matrix2x4-container > div:nth-child(2) {
     grid-column: 2 / 5;
 }
 
-.matrix-container > div {
+.matrix4x4-container > div:nth-child(2) {
+    grid-column: 2 / 5;
+}
+
+.matrix4x4-container > div:nth-child(7) {
+    grid-column: 1 / 5;
+}
+
+.matrix2x4-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: min(2.0vw, 2.5rem);
+    border: 0.125rem solid black;
+}
+
+.matrix4x4-container > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,6 +184,11 @@ body {
 }
 
 .game-image {
+    width: 100%;
+    height: auto;
+}
+
+.game-video {
     width: 100%;
     height: auto;
 }
