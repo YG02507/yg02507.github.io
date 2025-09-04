@@ -134,6 +134,16 @@ footer {
     align-items: center;
 }
 
+.project-logo {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
 .project-icon {
     width: 12.5%;
     text-align: right;
@@ -154,39 +164,17 @@ footer {
 }
 
 .grid-container > div {
+    border: 0.125rem solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: min(2.0vw, 2.5rem);
-    border: 0.125rem solid black;
-}
-
-.grid-container.row2column4 {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-}
-
-.grid-container.row2column4 > div:nth-child(2) {
-    grid-column: 2 / span 3;
-}
-
-.grid-container.row4column4 {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
-}
-
-.grid-container.row4column4 > div:nth-child(2) {
-    grid-column: 2 / span 3;
-}
-
-.grid-container.row4column4 > div:nth-child(7) {
-    grid-column: 1 / span 4;
 }
 
 .schema {
     padding: 1.0rem;
     background-color: lightgrey;
     text-align: center;
+    font-size: min(2.0vw, 2.5rem);
 }
 
 .game-image {
@@ -197,4 +185,47 @@ footer {
 .game-video {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 750px) {
+    .grid-container.first-grid {
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .grid-container.second-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .grid-container.second-grid > div:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+
+    .grid-container.second-grid > div:nth-child(6) {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 751px) {
+    .grid-container.first-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .grid-container.first-grid > div:nth-child(1) {
+        grid-column: 1 / span 4;
+    }
+
+    .grid-container.second-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .grid-container.second-grid > div:nth-child(1) {
+        grid-column: 1 / span 4;
+    }
+
+    .grid-container.second-grid > div:nth-child(6) {
+        grid-column: 1 / span 4;
+    }
 }
