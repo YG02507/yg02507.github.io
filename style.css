@@ -211,11 +211,23 @@ footer {
 @media all and (min-width: 751px) {
     .grid-container.first-grid {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
     }
 
     .grid-container.first-grid > div:nth-child(1) {
         grid-column: 1 / span 4;
+    }
+
+    .grid-container.first-grid > div:nth-child(6) {
+        grid-column: 1 / span 4;
+    }
+
+    .grid-container.first-grid > div:nth-child(7) {
+        grid-column: 1 / span 2;
+    }
+
+    .grid-container.first-grid > div:nth-child(8) {
+        grid-column: 3 / span 2;
     }
 
     .grid-container.second-grid {
